@@ -40,12 +40,18 @@ const App = () => {
     return (
       <main>
         <div className="title">
-          <h2>Out of Tours</h2>
+          <h2>No more tours</h2>
           <div className="title-underline"></div>
+
+          <button
+            style={{ marginTop: "2rem" }}
+            type="button"
+            className="btn"
+            onClick={() => fetchTours()}
+          >
+            Get more tours
+          </button>
         </div>
-        <button type="button" className="btn" onClick={() => fetchTours()}>
-          Get more tours
-        </button>
       </main>
     );
   }
