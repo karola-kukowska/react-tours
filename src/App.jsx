@@ -29,14 +29,20 @@ const App = () => {
     fetchTours();
   }, []);
   if (isLoading) {
-    return;
-    <Loader />;
+    return (
+      <main>
+        <Loader />;
+      </main>
+    );
   }
 
   if (tours != null && tours.length < 1) {
     return (
       <main>
-        <h1>No more tours</h1>
+        <div className="title">
+          <h2>Out of Tours</h2>
+          <div className="title-underline"></div>
+        </div>
         <button type="button" className="btn" onClick={() => fetchTours()}>
           Get more tours
         </button>
@@ -45,10 +51,9 @@ const App = () => {
   }
 
   return (
-    <div className="main">
-      <h1>Our Tours</h1>
+    <main>
       <Tours data={tours} removeTour={removeTour}></Tours>
-    </div>
+    </main>
   );
 };
 export default App;

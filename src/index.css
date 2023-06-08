@@ -252,7 +252,7 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
-.main {
+main {
   width: 90vw;
   max-width: var(--max-width);
   margin: 5rem auto;
